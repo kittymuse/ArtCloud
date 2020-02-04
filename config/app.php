@@ -174,7 +174,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        //短信验证码
+        App\Providers\EasySmsServiceProvider::class,
     ],
 
     /*
