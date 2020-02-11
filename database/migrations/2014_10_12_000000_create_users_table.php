@@ -18,8 +18,8 @@ class CreateUsersTable extends Migration
             $table->smallInteger('studio_id')->nullable()->comment('机构ID');
             $table->string('phone', 11)->unique()->comment('手机号');
             $table->string('name', 32)->comment('昵称');
-            $table->string('avatar', 100)->comment('头像');
-            $table->tinyInteger('sex')->nullable()->comment('性别');
+            $table->string('avatar', 100)->nullable()->comment('头像');
+            $table->tinyInteger('sex')->nullable()->default(0)->comment('性别');
             $table->timestamps();
         });
     }
