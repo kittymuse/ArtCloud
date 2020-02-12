@@ -100,6 +100,12 @@ class Kernel extends HttpKernel
 
         // Laravel 自带的强制用户邮箱认证的中间件，为了更加贴近我们的逻辑，已被重写
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+
+        //Cors 跨域
+        'cors' => \Medz\Cors\Laravel\Middleware\ShouldGroup::class,
+
+        // JWT 刷新Token
+        'api.refresh' => \App\Http\Middleware\Api\RefreshTokenMiddleware::class,
     ];
 
     // 设定中间件优先级，此数组定义了除『全局中间件』以外的中间件执行顺序

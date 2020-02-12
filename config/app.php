@@ -177,6 +177,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         //短信验证码
         App\Providers\EasySmsServiceProvider::class,
+        //Jwt-Auth
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
     ],
 
     /*

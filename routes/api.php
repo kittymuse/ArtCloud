@@ -12,15 +12,23 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::prefix('v1')->namespace('Api')->name('api.v1.')->group(function() {
-	Route::middleware('throttle:' . config('api.rate_limits.sign'))->group(function(){
+Route::namespace('Api')->prefix('v1')->middleware('cors')->group(function () {
+	Route::middleware('throttle:' . config('api.rate_limits.sign'))->group(function () {
 		// 短信验证码
-		Route::post('verificationCodes', 'VerificationCodesController@store')->name('verificationCodes.store');
+		Route::post('/verificationCodes', 'UserController@verificationCodes')->name('users.verificationCodes');
 		// 登录
-    	Route::post('authorizations', 'AuthorizationsController@store')->name('api.authorizations.store');
-    	// 刷新Token
-	    Route::put('authorizations/current', 'AuthorizationsController@update')->name('authorizations.update');
-	    // 删除Token
-	    Route::delete('authorizations/current', 'AuthorizationsController@destroy')->name('authorizations.destroy');
+    	Route::post('/login','UserController@login')->name('users.login');
+	});
+
+	Route::middleware('throttle:' . config('api.rate_limits.access'))->group(function () {
+        // 游客可以访问的接口
+
+        // 登录后可以访问的接口
+        Route::middleware('api.refresh')->group(function() {
+            // 我的信息
+            Route::get('/users/info', 'UserController@info')->name('users.info');
+            // 退出
+            Route::get('/logout','UserController@logout')->name('users.logout');
+        });
 	});
 });

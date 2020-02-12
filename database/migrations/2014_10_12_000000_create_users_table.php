@@ -19,7 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('phone', 11)->unique()->comment('手机号');
             $table->string('name', 32)->comment('昵称');
             $table->string('avatar', 100)->nullable()->comment('头像');
-            $table->tinyInteger('sex')->nullable()->default(0)->comment('性别');
+            $table->tinyInteger('sex')->default(0)->comment('性别');
+            $table->text('last_token')->nullable()->comment('登陆时的Token');
+            $table->tinyInteger('status')->default(0)->comment('状态');
             $table->timestamps();
         });
     }

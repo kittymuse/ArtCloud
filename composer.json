@@ -12,6 +12,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
         "laravel/tinker": "^2.0",
+        "medz/cors": "^1.4",
         "overtrue/easy-sms": "^1.1",
         "overtrue/laravel-lang": "~3.0",
         "tymon/jwt-auth": "1.0.0-rc.5.1"
