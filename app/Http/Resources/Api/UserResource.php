@@ -2,7 +2,7 @@
 
 namespace App\Http\Resources\Api;
 
-use App\Models\Enum\UserEnum;
+use App\Enums\UserSex;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResource extends JsonResource
@@ -19,7 +19,7 @@ class UserResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'avatar' => $this->avatar,
-            'sex' =>  UserEnum::getSexName($this->sex),
+            'sex' => UserSex::getDescription($this->sex),
             'created_at'=>(string)$this->created_at,
             'updated_at'=>(string)$this->updated_at
         ];

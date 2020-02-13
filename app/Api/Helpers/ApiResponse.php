@@ -22,9 +22,8 @@ trait ApiResponse
      * @param $statusCode
      * @return $this
      */
-    public function setStatusCode($statusCode,$httpCode=null)
+    public function setStatusCode($statusCode)
     {
-        $httpCode = $httpCode ?? $statusCode;
         $this->statusCode = $statusCode;
         return $this;
     }

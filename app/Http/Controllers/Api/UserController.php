@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Api;
 
-use Auth;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Overtrue\EasySms\EasySms;
@@ -68,35 +67,37 @@ class UserController extends Controller
                 'name' => substr_replace($verifyData['phone'], '****', 3, 4),
             ]);
         }
-
-        // 清除验证码缓存
-        \Cache::forget($request->verification_key);
-
-        //返回JWT Token
-        $token = Auth::guard('api')->login($user);
+        
         // 单设备登录
-        if ($user->last_token) {
+        if ($user->last_token && auth('api')->check()) {
         	try {
-        		Auth::guard('api')->setToken($user->last_token)->invalidate();
+        		auth('api')->setToken($user->last_token)->invalidate();
         	} catch (TokenExpiredException $e) {
         		//因为让一个过期的token再失效，会抛出异常，所以我们捕捉异常，不需要做任何处理
         	}
         }
+
+        //返回JWT Token
+        $token = auth('api')->login($user);
         $user->last_token = $token;
         $user->save();
+
+        // 清除验证码缓存
+        \Cache::forget($request->verification_key);
+        
         return $this->success(['token' => 'Bearer ' . $token]);
     }
 
 	//我的信息
 	public function info()
     {
-    	$user = Auth::guard('api')->user();
+    	$user = auth('api')->user();
     	return $this->success(new UserResource($user));
     }
 
     //用户退出
 	public function logout(){
-	    Auth::guard('api')->logout();
+	    auth('api')->logout();
 	    return $this->success('退出成功...');
 	}
 }
