@@ -20,29 +20,17 @@ class UserResource extends JsonResource
             'name' => $this->name,
             'sex' => UserSex::getDescription($this->sex),
             'role' => $this->getRoleName(),
-            'school' => $this->getSchoolName()
+            'school' => $this->when(($this->is_tourist == UserIsTourist::NOT_YET), function () {
+                return [
+                    'edit' => ($this->role == UserRole::TEACHER) ? true : false,
+                    'value' => ($this->role == UserRole::TEACHER) ?  $this->school ?? '未设置' : $this->studio_id
+                ];
+            }),
         ];
     }
-
 
     protected function getRoleName()
     {
         return ($this->is_tourist == UserIsTourist::NOT_YET) ? UserRole::getDescription($this->role) : UserIsTourist::getDescription(UserIsTourist::YES);
-    }
-
-    protected function getSchoolName()
-    {
-        if($this->is_tourist == UserIsTourist::NOT_YET){
-            $data = [
-                'display' => 'show',
-                'edit' => ($this->role == UserRole::TEACHER) ? true : false,
-                'value' => ($this->role == UserRole::TEACHER) ?  $this->school ?? '未设置' : $this->studio_id
-            ];
-        }else{
-            $data = [
-                'display' => 'hide'
-            ];
-        }
-        return $data;
     }
 }
