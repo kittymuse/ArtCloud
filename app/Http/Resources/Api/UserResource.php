@@ -19,9 +19,7 @@ class UserResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'avatar' => $this->avatar,
-            'sex' => UserSex::getDescription($this->sex),
-            'created_at'=>(string)$this->created_at,
-            'updated_at'=>(string)$this->updated_at
+            'sex' => UserSex::getDescription($this->sex)
         ];
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStudiosTable extends Migration
+class CreateCampuses extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateStudiosTable extends Migration
      */
     public function up()
     {
-        Schema::create('studios', function (Blueprint $table) {
+        Schema::create('campuses', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->smallInteger('studio_id')->comment('机构ID');
             $table->string('name', 32)->comment('名称');
             $table->timestamps();
         });
@@ -27,6 +28,6 @@ class CreateStudiosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('studios');
+        Schema::dropIfExists('campuses');
     }
 }
