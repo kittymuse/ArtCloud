@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\User;
-use App\Enums\UserRole;
-use App\Enums\UserIsTourist;
+use App\Enums\{UserRole, UserIsTourist};
 use Illuminate\Support\Str;
 use Overtrue\EasySms\EasySms;
 use App\Http\Resources\Api\UserResource;
