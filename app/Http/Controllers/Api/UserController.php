@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\User;
+use App\Enums\UserRole;
+use App\Enums\UserIsTourist;
 use Illuminate\Support\Str;
 use Overtrue\EasySms\EasySms;
 use App\Http\Resources\Api\UserResource;
@@ -50,22 +52,31 @@ class UserController extends Controller
     public function login(AuthorizationRequest $request)
     {
     	$verifyData = \Cache::get($request->verification_key);
+        $phone = $verifyData['phone'];
 
        	if (!$verifyData) {
            return $this->failed('验证码已失效,请重新获取', 401);
         }
 
-        if (!hash_equals($verifyData['code'], $request->verification_code) || !hash_equals($verifyData['phone'], $request->phone)) {
+        if (!hash_equals($verifyData['code'], $request->verification_code) || !hash_equals($phone, $request->phone)) {
             return $this->failed('验证码错误,请重新输入', 401);
         }
 
-        // 没有用户，默认创建一个散户
-        $user = User::where('phone', $verifyData['phone'])->first();
+        $user = User::where('phone', $phone)->first();
         if(!$user){
-            $user = User::create([
-                'phone' => $verifyData['phone'],
-                'name' => substr_replace($verifyData['phone'], '****', 3, 4),
-            ]);
+            // 账号不存在,注册为游客
+            if($request->role == UserRole::STUDENT){
+                $user = User::create([
+                    'role' => $request->role,
+                    'phone' => $phone,
+                    'name' => substr_replace($phone, '****', 3, 4),
+                    'is_tourist' => UserIsTourist::YES
+                ]);
+            }
+        }
+
+        if ($user->role != $request->role) {
+            return $this->failed('登录失败', 401);
         }
         
         // 单设备登录
