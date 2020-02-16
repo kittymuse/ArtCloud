@@ -65,19 +65,17 @@ class UserController extends Controller
         $user = User::where('phone', $phone)->first();
         if(!$user){
             // 账号不存在,注册为游客
-            if($request->role == UserRole::STUDENT){
-                $user = User::create([
-                    'role' => $request->role,
-                    'phone' => $phone,
-                    'name' => substr_replace($phone, '****', 3, 4),
-                    'is_tourist' => UserIsTourist::YES
-                ]);
+            $user = User::create([
+                'role' => $request->role,
+                'phone' => $phone,
+                'name' => substr_replace($phone, '****', 3, 4),
+                'is_tourist' => UserIsTourist::YES
+            ]);
+        }else{
+            if ($user->role != $request->role) {
+                return $this->failed('登录失败', 401);
             }
-        }
-
-        if ($user->role != $request->role) {
-            return $this->failed('登录失败', 401);
-        }
+        }        
         
         // 单设备登录
         if ($user->last_token && auth('api')->check()) {
