@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\User;
-use App\Enums\{UserRole, UserIsTourist};
 use Illuminate\Support\Str;
 use Overtrue\EasySms\EasySms;
+use App\Jobs\Api\SaveLastTokenJob;
+use App\Enums\{UserRole, UserIsTourist};
 use App\Http\Resources\Api\UserResource;
 use App\Http\Requests\Api\AuthorizationRequest;
 use App\Http\Requests\Api\VerificationCodeRequest;
@@ -87,10 +88,11 @@ class UserController extends Controller
         	}
         }
 
-        //返回JWT Token
+        // 返回JWT Token
         $token = auth('api')->login($user);
-        $user->last_token = $token;
-        $user->save();
+        
+        // 使用异步队列保存Token
+        SaveLastTokenJob::dispatch($user, $token);
 
         // 清除验证码缓存
         \Cache::forget($request->verification_key);

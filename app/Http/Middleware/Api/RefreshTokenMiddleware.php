@@ -4,6 +4,7 @@ namespace App\Http\Middleware\Api;
 
 use Auth;
 use Closure;
+use App\Jobs\Api\SaveLastTokenJob;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Tymon\JWTAuth\Http\Middleware\BaseMiddleware;
@@ -39,12 +40,15 @@ class RefreshTokenMiddleware extends BaseMiddleware
             try {
                 // 刷新用户的 token
                 $token = $this->auth->refresh();
+
                 // 使用一次性登录以保证此次请求的成功
                 Auth::guard('api')->onceUsingId($this->auth->manager()->getPayloadFactory()->buildClaimsCollection()->toPlainArray()['sub']);
+
                 // 刷新token时，更新last_token 单设备登录 
                 $user = Auth::guard('api')->user();
-                $user->last_token = $token;
-                $user->save();
+
+                // 使用异步队列保存Token
+                SaveLastTokenJob::dispatch($user, $token);
             } catch (JWTException $exception) {
                 // 如果捕获到此异常，即代表 refresh 也过期了，用户无法刷新令牌，需要重新登录。
                 throw new UnauthorizedHttpException('jwt-auth', $exception->getMessage());

@@ -12,6 +12,7 @@
         "bensampo/laravel-enum": "^1.32",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
+        "laravel/horizon": "^3.7",
         "laravel/tinker": "^2.0",
         "medz/cors": "^1.4",
         "overtrue/easy-sms": "^1.1",
