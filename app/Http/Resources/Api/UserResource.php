@@ -16,7 +16,7 @@ class UserResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'avatar' => $this->avatar,
+            'avatar' => $this->avatar ?? 'default_avatar.png',
             'name' => $this->name,
             'sex' => UserSex::getDescription($this->sex),
             'role' => $this->getRoleName(),

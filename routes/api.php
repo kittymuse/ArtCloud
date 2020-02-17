@@ -15,9 +15,9 @@ use Illuminate\Http\Request;
 Route::namespace('Api')->prefix('v1')->middleware('cors')->group(function () {
 	Route::middleware('throttle:' . config('api.rate_limits.sign'))->group(function () {
 		// 短信验证码
-		Route::post('/verificationCodes', 'UserController@verificationCodes')->name('users.verificationCodes');
-		// 登录
-    	Route::post('/login','UserController@login')->name('users.login');
+		Route::post('verificationCodes', 'VerificationCodesController@send')->name('verificationCodes.send');
+        // 登录
+        Route::post('authorizations', 'AuthorizationsController@login')->name('authorizations.login');
 	});
 
 	Route::middleware('throttle:' . config('api.rate_limits.access'))->group(function () {
@@ -26,9 +26,13 @@ Route::namespace('Api')->prefix('v1')->middleware('cors')->group(function () {
         // 登录后可以访问的接口
         Route::middleware('api.refresh')->group(function() {
             // 我的信息
-            Route::get('/users/info', 'UserController@info')->name('users.info');
+            Route::get('user', 'UsersController@info')->name('user.info');
+            // 上传图片
+            Route::post('images', 'ImagesController@store')->name('images.store');
+            // 修改我的信息
+            Route::patch('user', 'UsersController@update')->name('user.update');
             // 退出
-            Route::get('/logout','UserController@logout')->name('users.logout');
+            Route::delete('authorizations', 'AuthorizationsController@logout')->name('authorizations.logout');
         });
 	});
 });

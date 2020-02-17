@@ -2,25 +2,39 @@
 
 namespace App\Http\Requests\Api;
 
+use App\Enums\UserSex;
+use BenSampo\Enum\Rules\EnumValue;
+
 class UserRequest extends FormRequest
 {
     public function rules()
     {
-        switch ($this->method()) {
-            case 'GET':
-                {
-                    return [
-                        'id' => ['required,exists:users,id']
-                    ];
-                }
+        switch($this->method()) {
+            case 'PATCH':
+                return [
+                    'avatar' => 'filled',
+                    'name' => [
+                        'filled',
+                        'regex:/^[\x{4e00}-\x{9fa5}A-Za-z0-9-_]+$/u'
+                    ],
+                    'sex' => [
+                        'filled',
+                        new EnumValue(UserSex::class, false)
+                    ],
+                    'school' => [
+                        'filled',
+                        'regex:/^[\x{4e00}-\x{9fa5}A-Za-z0-9-_]+$/u'
+                    ],
+                ];
+                break;
         }
     }
 
     public function messages()
     {
         return [
-            'id.required'=>'用户ID必须填写',
-            'id.exists'=>'用户不存在'
+            'name.regex' => '昵称只支持中英文、数字、横杆和下划线。',
+            'school.regex' => '院校名称只支持中英文、数字、横杆和下划线。'
         ];
     }
 }
