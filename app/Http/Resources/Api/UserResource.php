@@ -2,7 +2,8 @@
 
 namespace App\Http\Resources\Api;
 
-use App\Enums\{UserRole, UserSex, UserIsTourist};
+use Illuminate\Support\Facades\Storage;
+use App\Enums\{UserRole, UserSex, UserIsTourist, Image};
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResource extends JsonResource
@@ -15,8 +16,9 @@ class UserResource extends JsonResource
      */
     public function toArray($request)
     {
+        $path = Image::getDescription(Image::USERS_AVATAR);
         return [
-            'avatar' => $this->avatar ?? 'default_avatar.png',
+            'avatar' => $this->avatar ? Storage::url($path.'/'.$this->avatar) : asset("storage/$path/default_avatar.png"),
             'name' => $this->name,
             'sex' => UserSex::getDescription($this->sex),
             'role' => $this->getRoleName(),

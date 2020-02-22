@@ -9,21 +9,16 @@ use BenSampo\Enum\Enum;
  * @method static static OptionTwo()
  * @method static static OptionThree()
  */
-final class UserRole extends Enum
+final class Image extends Enum
 {
-	// 身份
-    const TEACHER = 1;
-    const STUDENT = 2;
+	// 图片路径
+    const USERS_AVATAR = 1;
    
     public static function getDescription($value): string
 	{
 		switch ($value) {
-			case self::TEACHER:
-				return '老师';
-				break;
-			
-			case self::STUDENT:
-				return '学生';
+			case self::USERS_AVATAR:
+				return 'users/avatar';
 				break;
 		}
 	    return parent::getDescription($value);

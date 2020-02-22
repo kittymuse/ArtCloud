@@ -11,8 +11,7 @@ use BenSampo\Enum\Enum;
  */
 final class UserIsTourist extends Enum
 {
-    
-    
+	// 是否为游客
    	const NOT_YET = 0;
    	const YES = 1;
 

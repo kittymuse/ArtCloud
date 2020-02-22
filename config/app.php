@@ -158,7 +158,7 @@ return [
         Illuminate\Redis\RedisServiceProvider::class,
         Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
         Illuminate\Session\SessionServiceProvider::class,
-        //中文语言包
+        // 中文语言包
         Overtrue\LaravelLang\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
@@ -175,10 +175,12 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        //短信验证码
+        // 短信验证码
         App\Providers\EasySmsServiceProvider::class,
-        //Jwt-Auth
+        // Jwt-Auth
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        // 阿里云OSS
+        Jacobcyl\AliOSS\AliOssServiceProvider::class,
     ],
 
     /*
