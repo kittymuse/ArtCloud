@@ -5,10 +5,11 @@ namespace App\Enums;
 use BenSampo\Enum\Enum;
 
 /**
- * @method static static NORMAL()
- * @method static static INVALID()
+ * @method static static OptionOne()
+ * @method static static OptionTwo()
+ * @method static static OptionThree()
  */
-final class UserStatus extends Enum
+final class Status extends Enum
 {
     // 状态
     const NORMAL = 0;

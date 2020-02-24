@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersAddresses extends Migration
+class CreateUsersActivationCodesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateUsersAddresses extends Migration
      */
     public function up()
     {
-        Schema::create('users_addresses', function (Blueprint $table) {
+        Schema::create('users_activation_codes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateUsersAddresses extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_addresses');
+        Schema::dropIfExists('users_activation_codes');
     }
 }

@@ -1,13 +1,11 @@
 <?php
 
-use App\Enums\UserRole;
-use App\Enums\UserSex;
-use App\Enums\UserStatus;
+use App\Enums\{UserRole, UserSex, Status};
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsers extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -27,7 +25,7 @@ class CreateUsers extends Migration
             $table->string('school', 32)->nullable()->comment('院校');
             $table->tinyInteger('is_tourist')->unsigned()->comment('是否为游客');
             $table->text('last_token')->nullable()->comment('登陆时的Token');
-            $table->tinyInteger('status')->unsigned()->default(UserStatus::NORMAL)->comment('状态');
+            $table->tinyInteger('status')->unsigned()->default(Status::NORMAL)->comment('状态');
             $table->timestamps();
         });
     }

@@ -1,10 +1,11 @@
 <?php
 
+use App\Enums\Status;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersActivationCodes extends Migration
+class CreateCampusesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +14,11 @@ class CreateUsersActivationCodes extends Migration
      */
     public function up()
     {
-        Schema::create('users_activation_codes', function (Blueprint $table) {
+        Schema::create('campuses', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->smallInteger('studio_id')->comment('机构ID');
+            $table->string('name', 32)->comment('名称');
+            $table->tinyInteger('status')->unsigned()->default(Status::NORMAL)->comment('状态');
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreateUsersActivationCodes extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_activation_codes');
+        Schema::dropIfExists('campuses');
     }
 }

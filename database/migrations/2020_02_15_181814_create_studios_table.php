@@ -1,10 +1,11 @@
 <?php
 
+use App\Enums\Status;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersMembers extends Migration
+class CreateStudiosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +14,10 @@ class CreateUsersMembers extends Migration
      */
     public function up()
     {
-        Schema::create('users_members', function (Blueprint $table) {
+        Schema::create('studios', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name', 32)->comment('名称');
+            $table->tinyInteger('status')->unsigned()->default(Status::NORMAL)->comment('状态');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateUsersMembers extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_members');
+        Schema::dropIfExists('studios');
     }
 }
