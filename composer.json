@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "aoxiang/province-city-area": "^1.1",
         "bensampo/laravel-enum": "^1.32",
         "fideloper/proxy": "^4.0",
         "jacobcyl/ali-oss-storage": "^2.1",
