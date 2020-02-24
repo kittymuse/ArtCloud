@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4fbae29a1bf417f601b9e1291fdae11a",
+    "content-hash": "cb8cb793387f5d9f2208fa6594c4670d",
     "packages": [
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -52,59 +52,6 @@
             "description": "Aliyun OSS SDK for PHP",
             "homepage": "http://www.aliyun.com/product/oss/",
             "time": "2019-11-15T11:05:42+00:00"
-        },
-        {
-            "name": "aoxiang/province-city-area",
-            "version": "v1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aoxiang594/laravel-province-city-area.git",
-                "reference": "a6f6d2e7fe9a44f3030e4142e55f999ec40c5c71"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aoxiang594/laravel-province-city-area/zipball/a6f6d2e7fe9a44f3030e4142e55f999ec40c5c71",
-                "reference": "a6f6d2e7fe9a44f3030e4142e55f999ec40c5c71",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "guzzlehttp/guzzle": "~6.0",
-                "php": "^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Aoxiang\\Pca\\ProvinceCityAreaServiceProvider"
-                    ],
-                    "alias": {
-                        "ProvinceCityArea": "Aoxiang\\Pca\\Facades\\ProvinceCityAreaFacades"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Aoxiang\\Pca\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Aoxiang",
-                    "email": "mail@aoxiang.me"
-                }
-            ],
-            "description": "China Province City Area From JD.COM",
-            "time": "2019-06-26T01:16:43+00:00"
         },
         {
             "name": "bensampo/laravel-enum",

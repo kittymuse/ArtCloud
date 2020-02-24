@@ -181,8 +181,6 @@ return [
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         // 阿里云OSS
         Jacobcyl\AliOSS\AliOssServiceProvider::class,
-        // 省市县级联数据
-        Aoxiang\Pca\ProvinceCityAreaServiceProvider::class
     ],
 
     /*
