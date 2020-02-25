@@ -5,7 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersAddressesTable extends Migration
+class CreateUserAddressesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class CreateUsersAddressesTable extends Migration
      */
     public function up()
     {
-        Schema::create('users_addresses', function (Blueprint $table) {
+        Schema::create('user_addresses', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->smallInteger('user_id')->unsigned()->comment('用户ID');
             $table->string('consignee', 32)->comment('收货人');
@@ -36,6 +36,6 @@ class CreateUsersAddressesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_addresses');
+        Schema::dropIfExists('user_addresses');
     }
 }

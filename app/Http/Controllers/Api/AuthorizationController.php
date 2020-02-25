@@ -7,7 +7,7 @@ use App\Jobs\Api\SaveLastTokenJob;
 use App\Enums\{UserRole, UserIsTourist};
 use App\Http\Requests\Api\AuthorizationRequest;
 
-class AuthorizationsController extends Controller
+class AuthorizationController extends Controller
 {
     // 登录
     public function login(AuthorizationRequest $request)

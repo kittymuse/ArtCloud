@@ -6,7 +6,7 @@ use App\Enums\Image;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\Api\ImageRequest;
 
-class ImagesController extends Controller
+class ImageController extends Controller
 {
 	// 上传图片
     public function store(ImageRequest $request)

@@ -6,7 +6,7 @@ use Illuminate\Support\Str;
 use Overtrue\EasySms\EasySms;
 use App\Http\Requests\Api\VerificationCodeRequest;
 
-class VerificationCodesController extends Controller
+class VerificationCodeController extends Controller
 {
     // 短信验证码
 	public function send(VerificationCodeRequest $request, EasySms $easySms)

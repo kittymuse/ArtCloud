@@ -15,9 +15,9 @@ use Illuminate\Http\Request;
 Route::namespace('Api')->prefix('v1')->middleware('cors')->group(function () {
 	Route::middleware('throttle:' . config('api.rate_limits.sign'))->group(function () {
 		// 短信验证码
-		Route::post('verificationCodes', 'VerificationCodesController@send')->name('verificationCodes.send');
+		Route::post('verificationCodes', 'VerificationCodeController@send')->name('verificationCodes.send');
         // 登录
-        Route::post('authorizations', 'AuthorizationsController@login')->name('authorizations.login');
+        Route::post('authorizations', 'AuthorizationController@login')->name('authorizations.login');
 	});
 
 	Route::middleware('throttle:' . config('api.rate_limits.access'))->group(function () {
@@ -26,13 +26,19 @@ Route::namespace('Api')->prefix('v1')->middleware('cors')->group(function () {
         // 登录后可以访问的接口
         Route::middleware('api.refresh')->group(function() {
             // 我的信息
-            Route::get('user', 'UsersController@info')->name('user.info');
-            // 上传图片
-            Route::post('images', 'ImagesController@store')->name('images.store');
+            Route::get('user', 'UserController@info')->name('user.info');
             // 修改我的信息
-            Route::patch('user', 'UsersController@update')->name('user.update');
+            Route::patch('user', 'UserController@update')->name('user.update');
+            // 上传图片
+            Route::post('images', 'ImageController@store')->name('images.store');
+            // 新建收货地址
+            Route::post('user/addresses', 'UserAddressesController@store')->name('user.addresses.store');
+            // 修改收货地址
+            Route::patch('user/addresses', 'UserAddressesController@update')->name('user.addresses.update');
+            // 删除收货地址
+            Route::delete('user/addresses', 'UserAddressesController@destroy')->name('user.addresses.destroy');
             // 退出
-            Route::delete('authorizations', 'AuthorizationsController@logout')->name('authorizations.logout');
+            Route::delete('authorizations', 'AuthorizationController@logout')->name('authorizations.logout');
         });
 	});
 });

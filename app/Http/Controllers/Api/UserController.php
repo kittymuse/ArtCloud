@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Requests\Api\UserRequest;
 use App\Http\Resources\Api\UserResource;
 
-class UsersController extends Controller
+class UserController extends Controller
 {
 	// 我的信息
 	public function info()
