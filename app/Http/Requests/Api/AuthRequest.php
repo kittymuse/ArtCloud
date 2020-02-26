@@ -5,7 +5,7 @@ namespace App\Http\Requests\Api;
 use App\Enums\UserRole;
 use BenSampo\Enum\Rules\EnumValue;
 
-class AuthorizationRequest extends FormRequest
+class AuthRequest extends FormRequest
 {
     public function rules()
     {

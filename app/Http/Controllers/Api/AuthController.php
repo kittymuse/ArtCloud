@@ -5,12 +5,12 @@ namespace App\Http\Controllers\Api;
 use App\Models\User;
 use App\Jobs\Api\SaveLastTokenJob;
 use App\Enums\{UserRole, UserIsTourist};
-use App\Http\Requests\Api\AuthorizationRequest;
+use App\Http\Requests\Api\AuthRequest;
 
-class AuthorizationController extends Controller
+class AuthController extends Controller
 {
     // 登录
-    public function login(AuthorizationRequest $request)
+    public function login(AuthRequest $request)
     {
     	$verifyData = \Cache::get($request->verification_key);
         $phone = $verifyData['phone'];
