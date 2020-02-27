@@ -14,9 +14,9 @@ use Illuminate\Http\Request;
 */
 Route::namespace('Api')->prefix('v1')->middleware('cors')->group(function () {
 
-		// 短信验证码
-		Route::post('verificationCodes', 'VerificationCodeController@send');
-        // 登录
+		// 发送手机验证码
+		Route::post('captcha/sms', 'CaptchaController@sentSms');
+        // 手机号登录
         Route::post('login', 'AuthController@login');
         // 退出
         Route::delete('logout', 'AuthController@logout');

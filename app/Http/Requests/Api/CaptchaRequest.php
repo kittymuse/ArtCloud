@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\Api;
 
-class VerificationCodeRequest extends FormRequest
+class CaptchaRequest extends FormRequest
 {
     public function rules()
     {

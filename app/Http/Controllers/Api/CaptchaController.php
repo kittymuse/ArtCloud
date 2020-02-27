@@ -4,12 +4,12 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Support\Str;
 use Overtrue\EasySms\EasySms;
-use App\Http\Requests\Api\VerificationCodeRequest;
+use App\Http\Requests\Api\CaptchaRequest;
 
-class VerificationCodeController extends Controller
+class CaptchaController extends Controller
 {
-    // 短信验证码
-	public function send(VerificationCodeRequest $request, EasySms $easySms)
+    // 发送手机验证码
+	public function sentSms(CaptchaRequest $request, EasySms $easySms)
     {
         $phone = $request->phone;
 

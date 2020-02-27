@@ -9,7 +9,7 @@ use App\Http\Requests\Api\AuthRequest;
 
 class AuthController extends Controller
 {
-    // 登录
+    // 手机号登录
     public function login(AuthRequest $request)
     {
     	$verifyData = \Cache::get($request->verification_key);
