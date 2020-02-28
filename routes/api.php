@@ -22,19 +22,14 @@ Route::namespace('Api')->prefix('v1')->middleware('cors')->group(function () {
         Route::delete('logout', 'AuthController@logout');
 
         // 登录后可以访问的接口
-        Route::middleware('auth:api')->group(function() {
+        Route::middleware('api.refresh')->group(function() {
             // 我的信息
             Route::get('user', 'UserController@info');
             // 修改我的信息
             Route::patch('user', 'UserController@update');
-            // 上传图片
+            // 上传用户头像
             Route::post('images', 'ImageController@store');
-            // 新建收货地址
-            Route::post('user/addresses', 'UserAddressesController@store');
-            // 修改收货地址
-            Route::patch('user/addresses', 'UserAddressesController@update');
-            // 删除收货地址
-            Route::delete('user/addresses', 'UserAddressesController@destroy');
-            
+            // 用户收货地址
+            Route::resource('user/addresses', 'UserAddressesController');
         });
 });
