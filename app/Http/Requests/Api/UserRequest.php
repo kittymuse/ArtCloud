@@ -14,7 +14,7 @@ class UserRequest extends FormRequest
                 return [
                     'avatar' => 'filled',
                     'name' => [
-                        'filled',
+                        'filled'
                         'regex:/^[\x{4e00}-\x{9fa5}A-Za-z0-9-_]+$/u'
                     ],
                     'sex' => [
@@ -22,7 +22,7 @@ class UserRequest extends FormRequest
                         new EnumValue(UserSex::class, false)
                     ],
                     'school' => [
-                        'filled',
+                        'filled'
                         'regex:/^[\x{4e00}-\x{9fa5}A-Za-z0-9-_]+$/u'
                     ],
                 ];

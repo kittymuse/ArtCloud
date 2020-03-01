@@ -30,6 +30,9 @@ Route::namespace('Api')->prefix('v1')->middleware('cors')->group(function () {
             // 上传用户头像
             Route::post('images', 'ImageController@store');
             // 用户收货地址
-            Route::resource('user/addresses', 'UserAddressesController');
+            Route::resource('user/addresses', 'UserAddressController');
+            // 所在地区
+            Route::get('regions/{parent_id}', 'RegionController@show');
+
         });
 });

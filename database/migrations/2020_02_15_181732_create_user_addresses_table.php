@@ -19,9 +19,7 @@ class CreateUserAddressesTable extends Migration
             $table->smallInteger('user_id')->unsigned()->comment('用户ID');
             $table->string('consignee', 32)->comment('收货人');
             $table->string('phone', 11)->comment('手机号码');
-            $table->smallInteger('province')->unsigned()->comment('省');
-            $table->smallInteger('city')->unsigned()->comment('市');
-            $table->smallInteger('areas')->unsigned()->comment('区');
+            $table->string('regions', 32)->comment('所在地区');
             $table->text('detail')->comment('详细地址');
             $table->tinyInteger('is_default')->unsigned()->default(AddressDefault::NOT_YET)->comment('是否为默认地址');
             $table->tinyInteger('status')->unsigned()->default(Status::NORMAL)->comment('状态');

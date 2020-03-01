@@ -10,9 +10,9 @@ class CreateRegionsTable extends Migration
     {
         Schema::create('regions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->default('')->comment('省市县名称');
-            $table->string('parent_id')->default(0)->comment('父级id');
-            $table->enum('type', ['province', 'city', 'area', 'street'])->default('province')->comment('类型');
+            $table->string('name')->default('')->comment('名称');
+            $table->string('parent_id')->default(0)->comment('父级ID');
+            $table->tinyInteger('type')->unsigned()->comment('类型');
         });
     }
 
