@@ -24,7 +24,6 @@ class CreateUsersTable extends Migration
             $table->string('avatar', 100)->nullable()->comment('头像');
             $table->string('school', 32)->nullable()->comment('院校');
             $table->tinyInteger('is_tourist')->unsigned()->comment('是否为游客');
-            $table->text('last_token')->nullable()->comment('登陆时的Token');
             $table->tinyInteger('status')->unsigned()->default(Status::NORMAL)->comment('状态');
             $table->timestamps();
         });
