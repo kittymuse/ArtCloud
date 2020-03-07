@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee498298099c303947809be74531c2a7",
+    "content-hash": "a1d5db05898d03e9d76c79a10cf72181",
     "packages": [
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -424,16 +424,16 @@
         },
         {
             "name": "dzcyr/laravel-regions",
-            "version": "v1.1.5",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dzcyr/laravel-regions.git",
-                "reference": "41addc9deecaef7bda6156123f76097ac66f6e57"
+                "reference": "8a985441a3251790dab31f5cf91a852c79457bad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dzcyr/laravel-regions/zipball/41addc9deecaef7bda6156123f76097ac66f6e57",
-                "reference": "41addc9deecaef7bda6156123f76097ac66f6e57",
+                "url": "https://api.github.com/repos/Dzcyr/laravel-regions/zipball/8a985441a3251790dab31f5cf91a852c79457bad",
+                "reference": "8a985441a3251790dab31f5cf91a852c79457bad",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -473,7 +473,7 @@
                 }
             ],
             "description": "China Regions From JD.COM",
-            "time": "2020-02-29T14:34:57+00:00"
+            "time": "2020-03-07T13:38:25+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -4673,16 +4673,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "1.16.0",
+            "version": "1.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "37f094775814b68d0c6cc8b8ff3c3be243f20725"
+                "reference": "af05ac5ee8587395d7474ec0681c08776a2cb09d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/37f094775814b68d0c6cc8b8ff3c3be243f20725",
-                "reference": "37f094775814b68d0c6cc8b8ff3c3be243f20725",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/af05ac5ee8587395d7474ec0681c08776a2cb09d",
+                "reference": "af05ac5ee8587395d7474ec0681c08776a2cb09d",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4715,7 +4715,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "v2.x-dev"
+                    "dev-master": "1.x-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -4746,7 +4746,7 @@
                 "laravel",
                 "page"
             ],
-            "time": "2020-01-21T17:46:02+00:00"
+            "time": "2020-03-05T12:39:07+00:00"
         },
         {
             "name": "facade/ignition-contracts",
@@ -5455,16 +5455,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "v1.10.2",
+            "version": "v1.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9"
+                "reference": "451c3cd1418cf640de218914901e51b064abb093"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
-                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/451c3cd1418cf640de218914901e51b064abb093",
+                "reference": "451c3cd1418cf640de218914901e51b064abb093",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -5520,7 +5520,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2020-01-20T15:57:02+00:00"
+            "time": "2020-03-05T15:02:03+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
