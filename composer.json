@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.2",
         "bensampo/laravel-enum": "^1.33",
+        "dzcyr/laravel-regions": "^1.1",
         "fideloper/proxy": "^4.0",
         "jacobcyl/ali-oss-storage": "^2.1",
         "laravel/framework": "^6.2",

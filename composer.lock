@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "744612a9a6b5109340121cde20407e86",
+    "content-hash": "ee498298099c303947809be74531c2a7",
     "packages": [
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -421,6 +421,59 @@
                 "schedule"
             ],
             "time": "2019-03-31T00:38:28+00:00"
+        },
+        {
+            "name": "dzcyr/laravel-regions",
+            "version": "v1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dzcyr/laravel-regions.git",
+                "reference": "41addc9deecaef7bda6156123f76097ac66f6e57"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dzcyr/laravel-regions/zipball/41addc9deecaef7bda6156123f76097ac66f6e57",
+                "reference": "41addc9deecaef7bda6156123f76097ac66f6e57",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "php": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dzcyr\\Region\\RegionServiceProvider"
+                    ],
+                    "alias": {
+                        "Region": "Dzcyr\\Region\\Facades\\RegionFacades"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dzcyr\\Region\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dzcyr",
+                    "email": "329636491@qq.com"
+                }
+            ],
+            "description": "China Regions From JD.COM",
+            "time": "2020-02-29T14:34:57+00:00"
         },
         {
             "name": "egulias/email-validator",

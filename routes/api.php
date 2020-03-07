@@ -38,6 +38,10 @@ Route::prefix('v1')->namespace('Api')->name('api.v1.')->group(function () {
             Route::patch('user', 'UserController@update');
             // 上传用户头像
             Route::post('images', 'ImageController@store');
+            // 用户收货地址
+            Route::apiResource('user/addresses', 'UserAddressController');
+            // 所在地区
+            Route::get('regions', 'RegionController@index');
         });
     });
 });
