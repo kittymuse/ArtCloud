@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => env('FILESYSTEM_DRIVER', 'oss'),
 
     /*
     |--------------------------------------------------------------------------
@@ -63,7 +63,18 @@ return [
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
         ],
-
+        
+        'oss' => [
+            'driver' => 'oss',
+            'access_id' => env('OSS_ALIYUN_ACCESS_ID'),
+            'access_key' => env('OSS_ALIYUN_ACCESS_KEY'),
+            'bucket' => env('OSS_ALIYUN_ACCESS_BUCKET'),
+            'endpoint' => env('OSS_ALIYUN_ACCESS_ENDPOINT'),
+            'cdnDomain' => '',
+            'ssl' => false,
+            'isCName' => false,
+            'debug' => false
+        ],
     ],
 
 ];

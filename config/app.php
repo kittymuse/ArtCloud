@@ -178,6 +178,8 @@ return [
         
         // 短信验证码
         App\Providers\EasySmsServiceProvider::class,
+        // 阿里云OSS
+        Jacobcyl\AliOSS\AliOssServiceProvider::class,
     ],
 
     /*
