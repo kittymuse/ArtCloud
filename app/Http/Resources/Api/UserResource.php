@@ -32,7 +32,7 @@ class UserResource extends JsonResource
                 'sex' => UserSex::getDescription($this->sex),
                 'school' => $this->when($this->is_tourist == UserIsTourist::NOT_YET, [
                     'edit' => ($this->role == UserRole::TEACHER) ? true : false,
-                    'value' => ($this->role == UserRole::TEACHER) ?  $this->school ?? '未设置' : $this->studio_id
+                    'value' => ($this->role == UserRole::TEACHER) ?  $this->school ?? '未设置' : $this->studio_id ?? '未设置'
                 ]),
                 'userAddress' => $this->getUserAddressName(),
             ]),
