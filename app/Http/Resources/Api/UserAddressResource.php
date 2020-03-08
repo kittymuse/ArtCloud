@@ -20,7 +20,8 @@ class UserAddressResource extends JsonResource
             'consignee' => $this->consignee,
             'phone' => $this->phone,
             'regions' => getRegionsName($this->regions),
-            'detail' => $this->detail
+            'detail' => $this->detail,
+            'is_default' => $this->is_default
         ];
     }
 }
