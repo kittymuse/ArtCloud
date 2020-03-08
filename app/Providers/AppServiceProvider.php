@@ -26,5 +26,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Resource::withoutWrapping();
         \App\Models\User::observe(\App\Observers\UserObserver::class);
+        \App\Models\UserAddress::observe(\App\Observers\UserAddressObserver::class);
     }
 }
