@@ -2,9 +2,10 @@
 
 namespace App\Http\Resources\Api;
 
+use App\Models\UserAddress; 
 use Illuminate\Support\Facades\Storage;
-use App\Enums\{UserRole, UserSex, UserIsTourist, Image};
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Enums\{UserRole, UserSex, UserIsTourist, UserAddressIsDefault, Image};
 
 class UserResource extends JsonResource
 {
@@ -33,6 +34,7 @@ class UserResource extends JsonResource
                     'edit' => ($this->role == UserRole::TEACHER) ? true : false,
                     'value' => ($this->role == UserRole::TEACHER) ?  $this->school ?? '未设置' : $this->studio_id
                 ]),
+                'userAddress' => $this->getUserAddressName(),
             ]),
             
         ];
@@ -48,5 +50,11 @@ class UserResource extends JsonResource
     protected function getRoleName()
     {
         return ($this->is_tourist == UserIsTourist::NOT_YET) ? UserRole::getDescription($this->role) : UserIsTourist::getDescription(UserIsTourist::YES);
+    }
+
+    protected function getUserAddressName()
+    {
+        $userAddress = userAddress::where('user_id', $this->id)->recent()->first();
+        return ($userAddress) ? getRegionsName($userAddress->regions) . $userAddress->detail : '未设置';
     }
 }

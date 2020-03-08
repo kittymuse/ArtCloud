@@ -4,6 +4,7 @@ namespace App\Observers;
 
 use App\Models\UserAddress;
 use App\Enums\UserAddressIsDefault;
+
 class UserAddressObserver
 {
 	public function created(UserAddress $userAddress)

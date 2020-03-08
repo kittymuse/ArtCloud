@@ -13,8 +13,10 @@ class UserAddressController extends Controller
     public function index(Request $request, UserAddress $userAddress)
     {
         UserAddressResource::wrap('data');
-        $userAddresses = $userAddress::where('user_id', $request->user()->id)->get();
-        return UserAddressResource::collection($userAddresses);
+        
+        return UserAddressResource::collection(
+            $userAddress::where('user_id', $request->user()->id)->recent()->get()
+        );
     }
 
     // 新建收货地址
