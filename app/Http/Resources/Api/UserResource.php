@@ -54,7 +54,14 @@ class UserResource extends JsonResource
 
     protected function getUserAddressName()
     {
-        $userAddress = userAddress::where('user_id', $this->id)->recent()->first();
+        // 判断是否有默认地址
+        $userAddress = userAddress::where([
+            ['user_id', $this->id],
+            ['is_default', UserAddressIsDefault::YES]
+        ])->first();
+        if(!$userAddress){
+            $userAddress = userAddress::where('user_id', $this->id)->recent()->first();
+        }
         return ($userAddress) ? getRegionsName($userAddress->regions) . $userAddress->detail : '未设置';
     }
 }

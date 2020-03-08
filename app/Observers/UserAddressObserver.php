@@ -22,7 +22,7 @@ class UserAddressObserver
   	{
   		if($userAddress->is_default == UserAddressIsDefault::YES){
   			$userAddress::where([
-	  			['user_id', '=', $userAddress->user_id],
+	  			['user_id', $userAddress->user_id],
 	  			['id', '!=', $userAddress->id]
 	  		])->update(['is_default' => UserAddressIsDefault::NOT_YET]);
   		}
