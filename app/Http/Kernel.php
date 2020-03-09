@@ -65,6 +65,8 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         // JWT 过期自动刷新Token
         'refresh.token' => \App\Http\Middleware\Api\RefreshToken::class,
+        // 跨域
+        'cors'=> \Medz\Cors\Laravel\Middleware\ShouldGroup::class,
     ];
 
     /**
