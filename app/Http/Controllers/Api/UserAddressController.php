@@ -14,9 +14,9 @@ class UserAddressController extends Controller
     {
         UserAddressResource::wrap('data');
         
-        return UserAddressResource::collection(
+        return $this->success(UserAddressResource::collection(
             $userAddress::where('user_id', $request->user()->id)->recent()->get()
-        );
+        ));
     }
 
     // 新建收货地址
@@ -25,13 +25,13 @@ class UserAddressController extends Controller
         $userAddress->fill($request->all());
         $userAddress->user_id = $request->user()->id;
         $userAddress->save();
-        return new UserAddressResource($userAddress);
+        return $this->success(new UserAddressResource($userAddress));
     }
 
     // 收货地址详情
     public function show(UserAddress $userAddress)
     {
-        return new UserAddressResource($userAddress);
+        return $this->success(new UserAddressResource($userAddress));
     }
 
     // 修改收货地址
@@ -39,14 +39,14 @@ class UserAddressController extends Controller
     {
         $userAddress->user_id = $request->user()->id;
         $userAddress->update($request->all());
-        return new UserAddressResource($userAddress);
+        return $this->success(new UserAddressResource($userAddress));
     }
 
     // 删除收货地址
     public function destroy(UserAddress $userAddress)
     {
         $userAddress->delete();
-
-        return response(null, 204);
+        
+        return $this->setStatusCode(204)->success(null);
     }
 }

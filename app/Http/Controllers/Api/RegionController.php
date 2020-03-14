@@ -13,6 +13,6 @@ class RegionController extends Controller
     {
     	$regions = Region::getRegions($request->parent_id);
     	RegionResource::wrap('data');
-        return RegionResource::collection($regions);
+        return $this->success(RegionResource::collection($regions));
     }
 }

@@ -11,13 +11,13 @@ class UserController extends Controller
     // 我的
 	public function me(Request $request)
     {
-    	return (new UserResource($request->user()))->showMeFields();
+        return $this->success((new UserResource($request->user()))->showMeFields());
     }
     
     // 当前登录用户信息
     public function info(Request $request)
     {
-        return new UserResource($request->user());
+        return $this->success(new UserResource($request->user()));
     }
 
     // 修改我的信息
@@ -29,6 +29,6 @@ class UserController extends Controller
 
         $user->update($attributes);
 
-        return new UserResource($user);
+        return $this->success(new UserResource($user));
     }
 }

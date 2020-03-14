@@ -14,7 +14,7 @@ class AuthController extends Controller
     	$verifyData = \Cache::get($request->verification_key);
 
        	if (!$verifyData) {
-           abort(403, '验证码已失效');
+            return $this->failed('验证码已失效', 403);
         }
 
         $phone = $verifyData['phone'];
@@ -35,7 +35,7 @@ class AuthController extends Controller
             ]);
         }else{
             if ($user->role != $request->role) {
-                throw new AuthenticationException('登录失败');
+                return $this->failed('登录失败');
             }
         }
 
@@ -45,14 +45,14 @@ class AuthController extends Controller
         // 清除验证码缓存
         \Cache::forget($request->verification_key);
         
-        return $this->respondWithToken($token)->setStatusCode(201);
+        return $this->setStatusCode(201)->success($this->respondWithToken($token));
     }
 
     // 退出
     public function logout()
     {
         auth('api')->logout();
-        return response(null, 204);
+        return $this->setStatusCode(204)->success(null);
     }
 
     protected function respondWithToken($token)

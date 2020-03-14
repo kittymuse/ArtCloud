@@ -28,7 +28,7 @@ class CaptchaController extends Controller
 	            ]);
 	        } catch (\Overtrue\EasySms\Exceptions\NoGatewayAvailableException $exception) {
 	        	$message = $exception->getException('aliyun')->getMessage();
-                abort(500, $message ?: '短信发送异常');
+                return $this->failed($message ?: '短信发送异常', 500);
 	        }
 	    }
 
@@ -37,9 +37,9 @@ class CaptchaController extends Controller
         // 缓存验证码 5 分钟过期。
         \Cache::put($key, ['phone' => $phone, 'code' => $code], $expiredAt);
 
-        return response()->json([
+        return $this->setStatusCode(201)->success([
             'key' => $key,
             'expired_at' => $expiredAt->toDateTimeString(),
-        ])->setStatusCode(201);
+        ]);
     }
 }

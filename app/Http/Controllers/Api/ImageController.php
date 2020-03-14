@@ -15,9 +15,9 @@ class ImageController extends Controller
 
 		$url = Storage::put($path, $request->image);
 
-		return response()->json([
+        return $this->success([
             'file_name' => str_replace($path.'/', '', $url),
-        	'url' => Storage::url($url)
+            'url' => Storage::url($url)
         ]);
     }
 }
