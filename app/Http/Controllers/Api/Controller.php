@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Api;
 
-use Illuminate\Http\Request;
 use App\Api\Helpers\ApiResponse;
 use App\Http\Controllers\Controller as BaseController;
 
