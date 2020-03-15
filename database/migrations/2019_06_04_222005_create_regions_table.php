@@ -11,7 +11,7 @@ class CreateRegionsTable extends Migration
         Schema::create('regions', function (Blueprint $table) {
             $table->increments('id')->comment('ID');
             $table->string('name', 32)->comment('名称');
-            $table->smallInteger('parent_id')->unsigned()->comment('父级ID');
+            $table->mediumInteger('parent_id')->unsigned()->comment('父级ID');
             $table->tinyInteger('type')->unsigned()->comment('类型');
         });
     }
