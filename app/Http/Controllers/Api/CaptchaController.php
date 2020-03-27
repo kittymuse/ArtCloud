@@ -13,6 +13,9 @@ class CaptchaController extends Controller
     {
         $phone = $request->phone;
 
+        $code = '1234';
+        
+        /*
         // 测试环境下发送测试验证码，节约短信费用
         if (!app()->environment('production')) {
             $code = '1234';
@@ -31,6 +34,7 @@ class CaptchaController extends Controller
                 return $this->failed($message ?: '短信发送异常', 500);
 	        }
 	    }
+        */
 
         $key = 'verificationCode_'.Str::random(15);
         $expiredAt = now()->addMinutes(5);
