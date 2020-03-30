@@ -64,7 +64,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         // JWT 过期自动刷新Token
-        'refresh.token' => \App\Http\Middleware\Api\RefreshToken::class,
+        'api.refresh'=>\App\Http\Middleware\Api\RefreshTokenMiddleware::class,
         // 跨域
         'cors'=> \Medz\Cors\Laravel\Middleware\ShouldGroup::class,
     ];
