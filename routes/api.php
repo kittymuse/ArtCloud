@@ -29,7 +29,7 @@ Route::prefix('v1')->namespace('Api')->name('api.v1.')->group(function () {
         
 
         // 登录后可以访问的接口
-        Route::middleware(['auth:api', 'refresh.token'])->group(function() {
+        Route::middleware(['refresh.token', 'auth:api'])->group(function() {
             // 我的
             Route::get('me', 'UserController@me');
             // 当前登录用户信息

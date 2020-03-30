@@ -180,6 +180,8 @@ return [
         App\Providers\EasySmsServiceProvider::class,
         // 阿里云OSS
         Jacobcyl\AliOSS\AliOssServiceProvider::class,
+        // JWT Token
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
     ],
 
     /*
