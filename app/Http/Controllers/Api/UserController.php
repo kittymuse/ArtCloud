@@ -9,21 +9,23 @@ use App\Http\Resources\Api\UserResource;
 class UserController extends Controller
 {
     // 我的
-	public function me(Request $request)
+	public function me()
     {
-        return $this->success((new UserResource($request->user()))->showMeFields());
+        $user = auth('api')->user();
+        return $this->success((new UserResource($user))->showMeFields());
     }
     
     // 当前登录用户信息
-    public function info(Request $request)
+    public function info()
     {
-        return $this->success(new UserResource($request->user()));
+        $user = auth('api')->user();
+        return $this->success(new UserResource($user));
     }
 
     // 修改我的信息
     public function update(UserRequest $request)
     {
-        $user = $request->user();
+        $user = auth('api')->user();
         
         $attributes = $request->only(['avatar', 'name', 'sex', 'school']);
 

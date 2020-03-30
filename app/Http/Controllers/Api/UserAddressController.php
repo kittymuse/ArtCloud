@@ -13,17 +13,18 @@ class UserAddressController extends Controller
     public function index(Request $request, UserAddress $userAddress)
     {
         UserAddressResource::wrap('data');
-        
+        $user = auth('api')->user();
         return $this->success(UserAddressResource::collection(
-            $userAddress::where('user_id', $request->user()->id)->recent()->get()
+            $userAddress::where('user_id', $user->id)->recent()->get()
         ));
     }
 
     // 新建收货地址
     public function store(UserAddressRequest $request, UserAddress $userAddress)
     {
+        $user = auth('api')->user();
         $userAddress->fill($request->all());
-        $userAddress->user_id = $request->user()->id;
+        $userAddress->user_id = $user->id;
         $userAddress->save();
         return $this->success(new UserAddressResource($userAddress));
     }
@@ -37,7 +38,8 @@ class UserAddressController extends Controller
     // 修改收货地址
     public function update(UserAddressRequest $request, UserAddress $userAddress)
     {
-        $userAddress->user_id = $request->user()->id;
+        $user = auth('api')->user();
+        $userAddress->user_id = $user->id;
         $userAddress->update($request->all());
         return $this->success(new UserAddressResource($userAddress));
     }
@@ -46,7 +48,6 @@ class UserAddressController extends Controller
     public function destroy(UserAddress $userAddress)
     {
         $userAddress->delete();
-        
         return $this->setStatusCode(204)->success(null);
     }
 }
