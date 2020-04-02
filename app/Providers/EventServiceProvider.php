@@ -18,6 +18,10 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        // Json处理中文为非Unicode
+        \Illuminate\Foundation\Http\Events\RequestHandled::class => [
+            \App\Listeners\SetResponseEncodingOptions::class,
+        ],
     ];
 
     /**
