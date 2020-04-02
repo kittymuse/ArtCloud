@@ -17,9 +17,9 @@ class ImageRequest extends FormRequest
         ];
 
         if ($this->type == Image::USERS_AVATAR) {
-            $rules['image'] = 'required|mimes:jpg,png|dimensions:min_width=200,min_height=200';
+            $rules['image'] = 'required|mimes:jpg,jpeg,png|dimensions:min_width=200,min_height=200';
         } else {
-            $rules['image'] = 'required|mimes:jpg,png';
+            $rules['image'] = 'required|mimes:jpg,jpeg,png';
         }
         return $rules;
     }
