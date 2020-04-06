@@ -18,8 +18,9 @@ class UserResource extends JsonResource
     public function toArray($request)
     {
         $path = Image::getDescription(Image::USERS_AVATAR);
+        $process = 'image/auto-orient,1/resize,m_fill,w_200,h_200/quality,q_90';
         return [
-            'avatar' => $this->avatar ? Storage::url($path.'/'.$this->avatar) : asset("storage/$path/default_avatar.png"),
+            'avatar' => $this->avatar ? Storage::signUrl($path.'/'.$this->avatar, 3600, ['x-oss-process' => $process]) : asset("storage/$path/default_avatar.png"),
             'name' => $this->name,
             'role' => $this->getRoleName(),
             

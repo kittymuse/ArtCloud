@@ -63,17 +63,15 @@ return [
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
         ],
-        
+
         'oss' => [
             'driver' => 'oss',
-            'access_id' => env('OSS_ALIYUN_ACCESS_ID'),
-            'access_key' => env('OSS_ALIYUN_ACCESS_KEY'),
-            'bucket' => env('OSS_ALIYUN_ACCESS_BUCKET'),
-            'endpoint' => env('OSS_ALIYUN_ACCESS_ENDPOINT'),
-            'cdnDomain' => '',
-            'ssl' => false,
-            'isCName' => false,
-            'debug' => false
+            'root' => '', // 设置上传时根前缀
+            'access_key' => env('OSS_ACCESS_KEY'),
+            'secret_key' => env('OSS_SECRET_KEY'),
+            'endpoint'   => env('OSS_ENDPOINT'), // 使用 ssl 这里设置如: https://oss-cn-beijing.aliyuncs.com
+            'bucket'     => env('OSS_BUCKET'),
+            'isCName'    => env('OSS_IS_CNAME', false), // 如果 isCname 为 false，endpoint 应配置 oss 
         ],
     ],
 
