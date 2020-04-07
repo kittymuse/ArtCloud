@@ -28,12 +28,12 @@
         </div>
         <div class="nav">
             <ul>
-            <li><a href="/">首页</a></li>
-            <!-- <li><a href="/book/galleryview.html">推荐图书</a></li> -->
-            <!-- <li><a href="/index.php/Book/galleryview">推荐图书</a></li> -->
-            <li><a href="/index/aboutus.html">关于我们</a></li>
-            <li><a href="/index/contactus.html">联系我们</a></li>
-            <li><a href="/book/galleryview.html">定制图书</a></li>
+            <li><a href="https://book.chinasundo.com/">首页</a></li>
+            <!-- <li><a href="https://book.chinasundo.com/book/galleryview.html">推荐图书</a></li> -->
+            <!-- <li><a href="https://book.chinasundo.com/index.php/Book/galleryview">推荐图书</a></li> -->
+            <li><a href="https://book.chinasundo.com/index/aboutus.html">关于我们</a></li>
+            <li><a href="https://book.chinasundo.com/index/contactus.html">联系我们</a></li>
+            <li><a href="https://book.chinasundo.com/book/galleryview.html">定制图书</a></li>
 
                             <li style="width:auto; margin-left:15px;height:60px;" class="ev">
                     <a href="javascript:;" style="    display: flex;
@@ -48,7 +48,7 @@
     display: flex " >
                     <img src="https://book.chinasundo.com/static//images/625249296168060610.png" class="cop" style="margin-right:5px;border:none" alt="">
                     
-                        <img src="/static/images/logo-small.jpg" style="width:30px;height:30px;border-radius:50px;display:inline-block;margin-left:7px;border:none" class="cap">
+                        <img src="https://book.chinasundo.com/static/images/logo-small.jpg" style="width:30px;height:30px;border-radius:50px;display:inline-block;margin-left:7px;border:none" class="cap">
                         <span style="display:inline-block;padding-left:8px;" class="cap">
                                           马超                  </span>
                     </a>    
@@ -56,22 +56,22 @@
 
                 <div class="by">
                     <div class="bup">
-                        <img src="/static/images/logo-small.jpg" style="width:30px;height:30px; float:left; margin-left: 17px; margin-top: 8px;">
+                        <img src="https://book.chinasundo.com/static/images/logo-small.jpg" style="width:30px;height:30px; float:left; margin-left: 17px; margin-top: 8px;">
                         <p>
                           <span>
                                                           马超                          </span>
                           <span>13611260290</span>
                         </p>
 
-                        <a href="/user/loginout.html" class="sundo-loginout" style="float: left; margin-left: 23px;margin-top: 10px; color: black; font-size: 12px;"> &nbsp; 退出</a>
+                        <a href="https://book.chinasundo.com/user/loginout.html" class="sundo-loginout" style="float: left; margin-left: 23px;margin-top: 10px; color: black; font-size: 12px;"> &nbsp; 退出</a>
                     </div>
 
                     <div class="opr">
                         <div class="ng">
                             <ul>
-                                <li style="border-left:none"><a href="/book_customized_center/index.html" >我的制作</a></li>
-                                <li><a href="/user_auth/index.html">账户管理</a></li>
-                                <li><a href="/user_message/index.html">消息</a></li>
+                                <li style="border-left:none"><a href="https://book.chinasundo.com/book_customized_center/index.html" >我的制作</a></li>
+                                <li><a href="https://book.chinasundo.com/user_auth/index.html">账户管理</a></li>
+                                <li><a href="https://book.chinasundo.com/user_message/index.html">消息</a></li>
                             </ul>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                 <span></span>       
                 <input type="text"  autocomplete="off"  name="code" placeholder="验证码" maxlength="5" class="" onkeyup="this.value=this.value.replace(/\s+/g,'')" >
                 </div>
-                <div class="rutter"><img src="/captcha.html" onclick="changeCode(this)"/></div>
+                <div class="rutter"><img src="https://book.chinasundo.com/captcha.html" onclick="changeCode(this)"/></div>
           </dd>
           <dd class="forkll">
             <button type="submit" class="submit_btn">立即登录</button>
@@ -200,7 +200,7 @@
             <span></span>       
                 <input type="text" name="code"  autocomplete="off" placeholder="验证码" maxlength="4"  >
             </div>
-                <div class="rutoer"><img src="/captcha.html" onclick="changeCode(this);" /></div>
+                <div class="rutoer"><img src="https://book.chinasundo.com/captcha.html" onclick="changeCode(this);" /></div>
         </dd>
         <dd class="jo" style="margin-top: 10px;">
             <div class="redd" >
@@ -253,7 +253,7 @@
             <span></span>       
                 <input type="text" name="code"  autocomplete="off" placeholder="验证码" maxlength="4"  >
             </div>
-                <div class="rutoer"><img src="/captcha.html" onclick="changeCode(this);" /></div>
+                <div class="rutoer"><img src="https://book.chinasundo.com/captcha.html" onclick="changeCode(this);" /></div>
         </dd>
         <dd class="jo" style="margin-top: 10px;">
             <div class="redd" >
@@ -318,7 +318,7 @@
             <span></span>       
                 <input type="text" name="code"  autocomplete="off" placeholder="验证码" maxlength="4"  >
             </div>
-                <div class="rutoer"><img src="/captcha.html" onclick="changeCode(this);" /></div>
+                <div class="rutoer"><img src="https://book.chinasundo.com/captcha.html" onclick="changeCode(this);" /></div>
         </dd>
         <dd class="jo" style="margin-top: 10px;">
             <div class="redd" >
@@ -411,7 +411,7 @@
     <div class="you2">
         <ul>
             <li class="fcn">
-            <a href="/book/galleryview.html" style="color:black">
+            <a href="https://book.chinasundo.com/book/galleryview.html" style="color:black">
                 <div class="servicesBox">
                     <div  class="serBox" >
                         <img src="https://book.chinasundo.com/static/images/home-index/jiaocaidingzhi.jpg"/> 
@@ -478,11 +478,11 @@
 <ul id="jump">
     <li>
         <span><sdf   id="top" ></sdf></span>
-        <a href="/user_auth/index.html" class="so rd"><span class="ppi " style="line-height: 40px;">账户</span></a>
+        <a href="https://book.chinasundo.com/user_auth/index.html" class="so rd"><span class="ppi " style="line-height: 40px;">账户</span></a>
     </li>
     <li>
         <span><sdf id="sina" ></sdf></span>
-        <a href="/book/galleryview.html" class="so rdd"><span class="ppi">图书系统</span></a>
+        <a href="https://book.chinasundo.com/book/galleryview.html" class="so rdd"><span class="ppi">图书系统</span></a>
     </li>
     <li>
         <span><sdf id="share"></sdf></span>
@@ -562,7 +562,7 @@
                     </div>
                     <div class="eep">
                         <span class="iconfont icon-lianjie">
-                            <a href="/book/bookstore.html " ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>  
+                            <a href="https://book.chinasundo.com/book/bookstore.html " ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>  
                         </span> 
                     </div>
                 </div>
@@ -575,7 +575,7 @@
                     </div>
                     <div class="eep">
                         <span class="iconfont icon-lianjie">
-                            <a href="/book/bookstore.html"  ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>  
+                            <a href="https://book.chinasundo.com/book/bookstore.html"  ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>  
                         </span> 
                     </div>
                 </div>
@@ -588,7 +588,7 @@
                     </div>
                     <div class="eep">
                         <span class="iconfont icon-lianjie">
-                            <a href="/book/bookstore.html"  ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>  
+                            <a href="https://book.chinasundo.com/book/bookstore.html"  ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>  
                         </span> 
                     </div>
                 </div>
@@ -601,7 +601,7 @@
                     </div>
                     <div class="eep">
                         <span class="iconfont icon-lianjie">
-                            <a href="/book/bookstore.html"   ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a> 
+                            <a href="https://book.chinasundo.com/book/bookstore.html"   ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a> 
                         </span> 
                     </div>
                 </div>
@@ -617,7 +617,7 @@
                     </div>
                     <div class="eep">
                         <span class="iconfont icon-lianjie">
-                            <a href="/book/bookstore.html"  ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>  
+                            <a href="https://book.chinasundo.com/book/bookstore.html"  ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>  
                         </span> 
                     </div>
                 </div>
@@ -630,7 +630,7 @@
                     </div>
                     <div class="eep">
                         <span class="iconfont icon-lianjie">
-                            <a href="/book/bookstore.html"   ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>
+                            <a href="https://book.chinasundo.com/book/bookstore.html"   ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>
                         </span> 
                     </div>
                 </div>
@@ -643,7 +643,7 @@
                     </div>
                     <div class="eep">
                         <span class="iconfont icon-lianjie">
-                            <a href="/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>   
+                            <a href="https://book.chinasundo.com/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>   
                         </span> 
                     </div>
                 </div>
@@ -656,7 +656,7 @@
                     </div>
                     <div class="eep">
                         <span class="iconfont icon-lianjie">
-                            <a href="/book/bookstore.html"  ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>  
+                            <a href="https://book.chinasundo.com/book/bookstore.html"  ><img src="https://book.chinasundo.com/static/images/home-index/dfeb2c7ba6dabb69a0e8add0d460d0c.png"/></a>  
                         </span> 
                     </div>
 
@@ -749,20 +749,20 @@
                 <ul>
                         <!--     -->
                             <ul>
-                                <li><a href="/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/qq.png" /><p> 《超级课件2.0》-振东速写-视频范画同步100讲-张振东</p></a></li>
-                                <li><a href="/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/ww.png" /><p>《超级课件2.0》-色稿 单体 完整稿 套题实战全书-邹佳欣</p></a></li>
-                                <li><a href="/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/ee.png" /><p>《超级课件2.0》-素描头像-肖迪的教学体系梳理与运用-肖迪 </p></a></li>
-                                <li><a href="/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/rr.png" /><p>《超级课件2.0》-王峰色彩静物体系50讲-王峰</p></a></li>
-                                <li><a href="/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/tt.png" /><p>《超级课件2.0》-素描头像-知识点全解析-陈洪彬</p></a></li>
-                                <li><a href="/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/yy.png" /><p>《超级课件2.0》-色稿专项训练-王峰 </p></a></li>
-                                <li><a href="/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/uu.png" /><p>《超级课件2.0》-素描静物-黄亮教学体系的梳理与运用-黄亮</p></a></li>
-                                <li><a href="/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/ii.png" /><p>《超级课件2.0》-素描头像 -从石膏五官到人像结构一本通-贾杰</p></a></li>
+                                <li><a href="https://book.chinasundo.com/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/qq.png" /><p> 《超级课件2.0》-振东速写-视频范画同步100讲-张振东</p></a></li>
+                                <li><a href="https://book.chinasundo.com/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/ww.png" /><p>《超级课件2.0》-色稿 单体 完整稿 套题实战全书-邹佳欣</p></a></li>
+                                <li><a href="https://book.chinasundo.com/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/ee.png" /><p>《超级课件2.0》-素描头像-肖迪的教学体系梳理与运用-肖迪 </p></a></li>
+                                <li><a href="https://book.chinasundo.com/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/rr.png" /><p>《超级课件2.0》-王峰色彩静物体系50讲-王峰</p></a></li>
+                                <li><a href="https://book.chinasundo.com/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/tt.png" /><p>《超级课件2.0》-素描头像-知识点全解析-陈洪彬</p></a></li>
+                                <li><a href="https://book.chinasundo.com/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/yy.png" /><p>《超级课件2.0》-色稿专项训练-王峰 </p></a></li>
+                                <li><a href="https://book.chinasundo.com/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/uu.png" /><p>《超级课件2.0》-素描静物-黄亮教学体系的梳理与运用-黄亮</p></a></li>
+                                <li><a href="https://book.chinasundo.com/book/bookstore.html" ><img src="https://book.chinasundo.com/static/images/home-index/ii.png" /><p>《超级课件2.0》-素描头像 -从石膏五官到人像结构一本通-贾杰</p></a></li>
                             </ul>
                         </ul>
                     </div>    
                 </div>  
                 <div class="geng">
-                    <a href="/book/galleryview.html" class="lop  ">更多产品&gt;&gt;</a>
+                    <a href="https://book.chinasundo.com/book/galleryview.html" class="lop  ">更多产品&gt;&gt;</a>
                 </div>
             </div>
 
@@ -811,53 +811,19 @@
                 </div>
             </div>
         </div>
-        <div class="dfr">
-            <div class="rgu">
-                <div class="qqy">
-                    <span class="qqo" style="color: black;">意见</span> <span style="color:#4DA833 ;">反馈</span>
-                </div>
-                <div style="text-align: center; margin-top: 3px;color: #999999;">用心专注，定义专业</div>
-            </div>
-            <div class="type-con fankui">
-                <div class="contai">
-                    <form action="/index/feedback.html" class="message" method="post">
-                        <div class="mes-text">
-                            <p><b style="color: black;">姓名</b></p>
-                            <input type="text" name="username" autocomplete="off"  placeholder="请输入您的姓名" />
-                        </div>
-                        <div class="mes-text">
-                            <p><b style="color: black;">邮箱</b></p>
-                            <input type="text" name="mailbox" autocomplete="off"  placeholder="请输入您的邮箱" />
-                        </div>
-                        <div class="mes-text">
-                            <p><b style="color: black;">电话</b></p>
-                            <input type="text" name="mobile" autocomplete="off"  placeholder="请输入您的电话" />
-                        </div>
 
-                        <div class="mes-text">
-                            <p><b style="color: black;">意见</b></p>
-                            <textarea name="opinion" style="" id="" placeholder="您的反馈意见"></textarea>
-                        </div>
-                        <div class="mes-text">
-                            <button type="submit" class="bhover-bor ">提交</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-        </div>
 
         <div class="dibu">
             <div class="ji">
                 <ul>
-                    <li><a href="/">首页</a></li>
-                    <li><a href="/book/bookstore.html" class="zxcp-checklogin" class="sundo-checklogin">书库</a></li>
-                    <li><a href="/book/bookspecial.html" class="zxcp-checklogin" >专题</a></li>
-                    <li><a href="/book/gallerystore.html" class="zxcp-checklogin" >图库</a></li>
-                    <!-- <li><a href="/book/galleryview.html">推荐图书</a></li> -->
-                    <li><a href="/book/galleryview.html"  >定制图书</a></li>
-                    <li><a href="/index/aboutus.html" >关于我们</a></li>
-                    <li style="border-right:1px solid #5D5D5D"><a href="/index/contactus.html" >联系我们</a></li>
+                    <li><a href="https://book.chinasundo.com/">首页</a></li>
+                    <li><a href="https://book.chinasundo.com/book/bookstore.html" class="zxcp-checklogin" class="sundo-checklogin">书库</a></li>
+                    <li><a href="https://book.chinasundo.com/book/bookspecial.html" class="zxcp-checklogin" >专题</a></li>
+                    <li><a href="https://book.chinasundo.com/book/gallerystore.html" class="zxcp-checklogin" >图库</a></li>
+                    <!-- <li><a href="https://book.chinasundo.com/book/galleryview.html">推荐图书</a></li> -->
+                    <li><a href="https://book.chinasundo.com/book/galleryview.html"  >定制图书</a></li>
+                    <li><a href="https://book.chinasundo.com/index/aboutus.html" >关于我们</a></li>
+                    <li style="border-right:1px solid #5D5D5D"><a href="https://book.chinasundo.com/index/contactus.html" >联系我们</a></li>
                 </ul>
             </div>
             <div class="jpo"></div>
@@ -894,7 +860,7 @@
     <div class="bei">
         <div class="lt">
                 <div>&nbsp;&nbsp;&nbsp;京ICP备 18026369号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sundo</div>
-                <div style="min-width:300px;">&nbsp;&nbsp;&nbsp;© 2018  book.chinasundo.com 版权所有</div>
+                <div style="min-width:300px;">&nbsp;&nbsp;&nbsp;© 2018  sundocloud.com 版权所有</div>
         </div>
     </div>
 
@@ -917,119 +883,7 @@
         <script src="https://book.chinasundo.com/static/js/home-index/shangdu.js" type="text/javascript" charset="utf-8"></script>
         <script src="https://book.chinasundo.com/static/js/home/new_project.js" type="text/javascript" charset="utf-8"></script>
 
-        <script type="text/javascript">
 
-            // 留言表单提交
-            var options = {
-                dataType:'json',
-                type:'post',
-                beforeSubmit: function(formData){
-                    //验证表单数据是否为空
-                    // var formData = $(this).serializeArray();
-                    var formNull = true;
-                    var msg = '';
-                    $.each(formData,function(k,v){
-                        if(!v.value || v.value.length == 0){
-                            formNull = false;
-                            msg = '请完善表单信息';
-                            return false;
-                        }else{
-                            if(v.name == 'mobile'){
-                                // 获取手机号
-                                is = checkTel(v.value);
-                                if(!is){
-                                    formNull = false;
-                                    msg = '手机号格式不正确请检查';
-                                    return false;
-                                }
-                            }
-                            
-                        }
-                    });
-
-
-                    if(!formNull){
-                        layer.msg(
-                            msg,
-                            '',
-                            function(){
-                                $(".message").find('.submit').removeClass('disabled');
-                                $(".message").find('.submit').removeAttr('disabled');
-                            }
-                            );
-                        return false;
-                    }
-                },
-                success:function(data){
-                    if(data.code && data.code == 1){
-                        layer.msg(
-                            '反馈成功，我们会尽快处理您的反馈信息！',
-                            '',
-                            function(){
-                                $(".message").find('.submit').removeClass('disabled');
-                                $(".message").find('.submit').removeAttr('disabled');
-                            }
-                            );
-                    }else{
-                        layer.msg(
-                            data.msg,
-                            '',
-                            function(){
-                                $(".message").find('.submit').removeClass('disabled');
-                                $(".message").find('.submit').removeAttr('disabled');
-                            }
-                            );
-                    }
-                },
-                error:function(){
-                    layer.msg(
-                        '系统繁忙',
-                        '',
-                        function(){
-                            $(".message").find('.submit').removeClass('disabled');
-                            $(".message").find('.submit').removeAttr('disabled');
-                        }
-                        );
-                }
-            };
-
-            $(".message").ajaxForm(options).submit(function(){
-                //禁止表单多次提交
-                $(".message").find('.submit').addClass('disabled');
-                $(".message").find('.submit').attr('disabled',true);
-
-                return false;
-            });
-
-            $('.forkaa input[type="radio"]').change(function(){
-                if($(this).prop('checked')){
-                    $(this).parent('label').siblings('label').children('div').removeClass('lock');
-                    $(this).prev('div').addClass('lock');
-                }
-            });
-
-            //验证手机号
-            function checkTel(phoneNum)
-            {
-                // 验证手机号格式
-                var reg = /^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/;
-                if(!reg.test(phoneNum)){
-                    layer.msg('手机号格式不正确请检查');
-                    return false;
-                }
-                return true;
-            }
-            
-            $(".wrapper .tab-item").click(function () {
-                $(this).addClass("active").siblings().removeClass("active");
-                $(".products .main").eq($(this).index()).show().siblings().hide();
-            })
-
-        
-
-
-    
-    </script>
 
 
 
