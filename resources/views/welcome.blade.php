@@ -501,7 +501,7 @@
                 <div class="oph">
                 <div class="ogg">
                     <span style="display: block; width: 344px; height: 34px;">地址：北京市通州区宋庄小堡尚堡原创茂B101</span>
-                    <span>网址：book.chinasundo.com</span>
+                    <span>网址：www.sundocloud.com</span>
                 <!-- <span>网址：www.sundobook.com</span> -->
                 </div>
                 <div class="lpi">
@@ -528,8 +528,8 @@
     </div>
     <div class="bei">
         <div class="lt">
-                <div>&nbsp;&nbsp;&nbsp;京ICP备 18026369号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sundo</div>
-                <div style="min-width:300px;">&nbsp;&nbsp;&nbsp;© 2018  sundocloud.com 版权所有</div>
+                <div>&nbsp;&nbsp;&nbsp;京ICP备18026369号-2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sundo</div>
+                <div style="min-width:300px;">&nbsp;&nbsp;&nbsp;© 2020  www.sundocloud.com 版权所有</div>
         </div>
     </div>
 
