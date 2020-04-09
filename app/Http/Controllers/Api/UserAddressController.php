@@ -48,6 +48,6 @@ class UserAddressController extends Controller
     public function destroy(UserAddress $userAddress)
     {
         $userAddress->delete();
-        return $this->setStatusCode(204)->success(null);
+        return $this->setStatusCode(204)->success('删除成功');
     }
 }
